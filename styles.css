@@ -143,7 +143,7 @@ footer > h6 {
 /* -------STYLING FOR PRODUCTS------- */
 
 .main_product {
-  padding: 12% 0 0;
+  padding: 5% 0 0;
 }
 
 .text_product {
@@ -168,9 +168,7 @@ footer > h6 {
   gap: 40px;
   padding: 45px 80px;
   justify-content: center;
-  /* border-radius: 5px; */
   background-color: var(--primary-color);
-  /* margin: 0 20px; */
 }
 
 #product-image {
@@ -335,10 +333,18 @@ footer > h6 {
     flex-direction: column;
   }
 
+  .product_images {
+    padding: 45px;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
-   .nav_bar > ul {
+  .main_product {
+    padding: 12% 0 0;
+  } 
+  
+  .nav_bar > ul {
     display: none;
   }
 
@@ -406,6 +412,15 @@ footer > h6 {
 }
 
 @media screen and (max-width: 320px) {
+  .main_product {
+    padding: 20% 0 0;
+  }
+
+  .product_images {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 45px;
+  }
+  
   .hero-img {
     margin: 40px 0 20px;
   }
