@@ -56,6 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function generateStarIcons(rating) {
+    const starIcons = '⭐'.repeat(Math.round(rating));
+    return starIcons;
+  }
+
   function displayEachCategory(products) {
     const container = document.getElementById('each_category');
     container.innerHTML = '';
@@ -69,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 id="product-title">${product.title}</h3>
             <p id="product-description">${product.description}</p>
             <p id="product-price">$ ${product.price}</p>
-            <p id="product-rating">${product.rating.rate} <span id="reviews">(${product.rating.count} reviews)</span></p>
+            <p id="product-rating">${generateStarIcons(product.rating.rate)} <span>${product.rating.rate}</span> <span id="reviews">(${product.rating.count} reviews)</span></p>
             `;
       container.appendChild(categoryDiv);
     });
