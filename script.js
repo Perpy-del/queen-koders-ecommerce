@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     return products;
   }
 
+  function generateStarIcons(rating) {
+    const starIcons = '⭐'.repeat(Math.round(rating));
+    return starIcons;
+  }
 
   function displayProducts(products) {
     const container = document.getElementById('product_images');
@@ -18,13 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
     products.forEach(product => {
       const productDIv = document.createElement('div');
       productDIv.className = 'product-info';
+      const rating = Math.round(product.rating.rate)
       productDIv.innerHTML = `
             <img src=${product.image} alt=${product.title} id="product-image">
             <h3 id="product-title">${product.title}</h3>
             <p id="product-description">${product.description}</p>
             <p id="product-price">$ ${product.price}</p>
             <p id="product-category">${product.category}</p>
-            <p id="product-rating">${product.rating.rate} <span id="reviews">(${product.rating.count} reviews)</span></p>
+            <p id="product-rating">${generateStarIcons(product.rating.rate)} <span>${product.rating.rate}</span> <span id="reviews">(${product.rating.count} reviews)</span></p>
             `;
       container.appendChild(productDIv);
     });
