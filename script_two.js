@@ -76,5 +76,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   fetchCategory().then(displayCategories);
-  fetchEachCategory('electronics');
+  // fetchEachCategory('electronics');
 });
