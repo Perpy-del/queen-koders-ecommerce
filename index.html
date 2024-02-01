@@ -11,8 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    <script src="https://kit.fontawesome.com/4e68ff5d5a.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!-- Desktop View -->
     <header class="header">
       <img src="./images/queen_koders_logo.svg" alt="logo" class="header_img" />
       <nav class="nav_bar">
@@ -33,14 +38,39 @@
       </nav>
     </header>
 
+    <!-- Mobile View -->
+    <header class="header mobile">
+      <img src="./images/queen_koders_logo.svg" alt="logo" class="header_img" />
+      <i class="fa-solid fa-bars" id="menu-bar"></i>
+    </header>
+    <nav class="mobile_navbar" id="mobile-nav">
+      <ul id="mobile-nav-ul">
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/#about">About Us</a>
+        </li>
+        <li>
+          <a href="/products.html">Products</a>
+        </li>
+        <li>
+          <a href="/categories.html">Categories</a>
+        </li>
+      </ul>
+      <h3 id="close-button">&times;</h3>
+    </nav>
+
     <!-- Hero Section -->
     <main class="main_content">
       <section class="hero">
         <div class="hero-text">
-          <h1>Making you comfortable and confident.</h1>
+          <h1>
+            Making you comfortable
+            <span style="color: purple">and</span> confident.
+          </h1>
           <p>
-            Our brand is trusted by many as we deliver on <br />
-            every of our promise.
+            Our brand is trusted by many as we deliver on every of our promise.
           </p>
         </div>
         <div>
@@ -112,5 +142,7 @@
     <footer>
       <h6>Built and Designed with 💖 and 💡 by the Queen Koders Team.</h6>
     </footer>
+
+    <script src="script_three.js"></script>
   </body>
 </html>

@@ -5,14 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function getProducts(page) {
     const res = await fetch(
-      `https://fakestoreapi.com/products?limit=6&page=${page}`
+      `https://fakestoreapi.com/products?limit=${6*page}`
     );
     const products = await res.json();
     return products;
   }
 
+
   function displayProducts(products) {
     const container = document.getElementById('product_images');
+    container.innerHTML = "";
     products.forEach(product => {
       const productDIv = document.createElement('div');
       productDIv.className = 'product-info';
@@ -28,10 +30,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  loadMoreBtn.addEventListener('click', async () => {
-    const products = await getProducts(currPage);
-    displayProducts(products);
-    currPage++;
+  loadMoreBtn.addEventListener('click', () => {
+    const container = document.getElementById('product_images');
+    const emptyCategoryDiv = document.createElement('div');
+    emptyCategoryDiv.className = 'product-empty';
+    emptyCategoryDiv.innerHTML = `
+    <div class="loading">
+      <div class="loader-container">
+      <div class="loader"></div>
+      </div>
+    </div>
+      `;
+    container.appendChild(emptyCategoryDiv);
+    setTimeout(async() => {
+      const products = await getProducts(currPage);
+      displayProducts(products);
+      currPage++;
+    }, 2000)
   });
 
   loadMoreBtn.click();

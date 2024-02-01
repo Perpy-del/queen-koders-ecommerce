@@ -11,34 +11,69 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    <script src="https://kit.fontawesome.com/4e68ff5d5a.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="header">
-      <img src="./images/wtf-logo.svg" alt="logo" class="header_img" />
+      <img src="./images/queen_koders_logo.svg" alt="logo" class="header_img" />
       <nav class="nav_bar">
         <ul>
           <li>
-            <a href="/index.html">About Us</a>
+            <a href="/index.html">Home</a>
+            <div class="anchor_line"></div>
+          </li>
+          <li>
+            <a href="/#about">About Us</a>
+            <div class="anchor_line"></div>
           </li>
           <li>
             <a href="/products.html">Products</a>
+            <div class="anchor_line"></div>
           </li>
           <li>
             <a href="/categories.html">Categories</a>
+            <div class="anchor_line"></div>
           </li>
         </ul>
       </nav>
     </header>
+    
+    <!-- Mobile View -->
+    <header class="header mobile">
+      <img src="./images/queen_koders_logo.svg" alt="logo" class="header_img" />
+      <i class="fa-solid fa-bars" id="menu-bar"></i>
+    </header>
+    <nav class="mobile_navbar" id="mobile-nav">
+      <ul id="mobile-nav-ul">
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/#about">About Us</a>
+        </li>
+        <li>
+          <a href="/products.html">Products</a>
+        </li>
+        <li>
+          <a href="/categories.html">Categories</a>
+        </li>
+      </ul>
+      <h3 id="close-button">&times;</h3>
+    </nav>
+
     <main class="main_product">
       <div class="text_product">
         <h2>Categories</h2>
         <h3>
-          Browse through our amazing products and find one that is your perfect
-          fit
+          Select the category of items you would like to browse through.
         </h3>
       </div>
       <div id="categories" class="categories-container"></div>
-    <section class="product_images" id="each_category"></section>
+    <section class="product_images" id="each_category">
+    </section>
     </main>
     <hr />
     <footer>
@@ -46,5 +81,6 @@
     </footer>
 
     <script src="script_two.js"></script>
+    <script src="script_three.js"></script>
   </body>
 </html>
