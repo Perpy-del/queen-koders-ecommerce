@@ -343,6 +343,10 @@ footer > h6 {
   .main_product {
     padding: 12% 0 0;
   } 
+
+  .img-container {
+    padding-top: 90px;
+  }
   
   .nav_bar > ul {
     display: none;
@@ -414,6 +418,10 @@ footer > h6 {
 @media screen and (max-width: 320px) {
   .main_product {
     padding: 20% 0 0;
+  }
+
+  .img-container {
+    padding-top: 0px;
   }
 
   .product_images {
