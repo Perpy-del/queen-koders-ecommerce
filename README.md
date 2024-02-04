@@ -1,5 +1,5 @@
 ![Screenshot of Spotify Logo](./images/favicon-32x32.png)
-# Spotify Clone Project
+# Queen Koders E-commerce Capstone Project
 
 ## Task
 
