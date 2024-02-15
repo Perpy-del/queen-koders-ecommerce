@@ -1,4 +1,4 @@
-![Screenshot of Spotify Logo](./images/favicon-32x32.png)
+![Screenshot of Queen Koders Logo](./images/favicon-32x32.png)
 # Queen Koders E-commerce Capstone Project
 
 ## Task
